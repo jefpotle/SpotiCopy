@@ -12,10 +12,10 @@ scope = 'user-library-read'
 
 # authorization
 try:
-    token = util.prompt_for_user_token(username, scope, client_id = 'c2efa581fbab458baaec0d6cb22664da', client_secret = '', redirect_uri = 'http://google.com/') # insert client secret ID
+    token = util.prompt_for_user_token(username, scope, client_id = 'c2efa581fbab458baaec0d6cb22664da', client_secret = '#CLIENT_SECRET', redirect_uri = 'http://google.com/') # insert client secret ID
 except:
     os.remove(f".cache-{username}")
-    token = util.prompt_for_user_token(username, scope, client_id = 'c2efa581fbab458baaec0d6cb22664da', client_secret = '', redirect_uri = 'http://google.com/') # insert client secret ID
+    token = util.prompt_for_user_token(username, scope, client_id = 'c2efa581fbab458baaec0d6cb22664da', client_secret = '#CLIENT_SECRET', redirect_uri = 'http://google.com/') # insert client secret ID
 
 # create spotipy object
 spotify = spotipy.Spotify(auth = token)
